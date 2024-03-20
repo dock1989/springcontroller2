@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/save}" th:object="${student}" method="post">
+<table>
+    <tr>
+        <td><label for="name">Name</label> </td>
+        <td><input type="text" id="name" th:field="*{name}" /></td>
+    </tr>
+    <tr>
+        <td><label for="emailid">Email Id</label> </td>
+        <td><input type="email" id="emailid" th:field="*{emailid}" /></td>
+    </tr>
+    <tr>
+        <td><label for="cnum">Contact Number</label> </td>
+        <td><input type="text" id="cnum" th:field="*{cnum}" /></td>
+    </tr>
+    <tr>
+        <td colspan="2"><label>
+            <input th:type="submit" value="Submit">
+        </label> <label>
+            <input th:type="reset" value="Clear">
+        </label>
+        </td>
+
+    </tr>
+
+</table>
+
+</form>
+</body>
+</html>
